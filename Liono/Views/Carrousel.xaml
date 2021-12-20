@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:carousel="clr-namespace:Syncfusion.SfCarousel.XForms;assembly=Syncfusion.SfCarousel.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Liono.ViewModels"
+             x:Class="Liono.Views.Carrousel">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="itemTemplate">
+                <Image Source="{Binding Image}" 
+					/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+
+        <carousel:SfCarousel x:Name="carousel"
+                            SwipeStarted="Carousel_SwipeStarted"
+                            SwipeEnded="Carousel_SwipeEnded"
+                             ItemTemplate="{StaticResource itemTemplate}" 
+                             ItemsSource="{Binding ImageCollection}"
+                          
+                             ViewMode="Linear"
+                             ItemHeight="520"
+                             ItemWidth="310"
+                             ItemSpacing="0"
+                             
+                             />
+
+    </ContentPage.Content>
+
+
+
+</ContentPage>
+
+<!--<ContentPage.Content>
+        <StackLayout>
+            <carousel:SfCarousel x:Name="carousel"
+                                 SelectedIndex="2"
+                                 ItemsSource="{Binding ImageCollection}">
+                <carousel:SfCarousel.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="{Binding BGColor}"/>
+                    </DataTemplate>
+                </carousel:SfCarousel.ItemTemplate>
+            </carousel:SfCarousel>
+            
+        </StackLayout>
+    </ContentPage.Content>
+    </ContentPage>-->

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:Liono.ViewModels"
+             xmlns:viewModels="clr-namespace:Liono.ViewModels;assembly=Liono"
+             x:Class="Liono.Views.ProfilDeco">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:AccueilViewModel x:Key="vm"/>
+            <vm:DialogViewModel x:Key="dvm"/>
+            <vm:LogoutViewModel x:Key="deco"/>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <viewModels:LogoutViewModel/>
+    </ContentPage.BindingContext>
+
+
+
+    <ScrollView>
+
+
+        <StackLayout Padding="10,10,10,0">
+            <StackLayout>
+                <Label Text="Mon Profil" HorizontalOptions="Center" 
+                       Margin="5,5" FontSize="{OnPlatform   iOS=28, Android=18, UWP=18}">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Quicksand-Bold"/>
+                            <On Platform="Android, UWP" Value="Quicksand-Bold.ttf#Quicksand-Bold"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <Frame BackgroundColor="#0F11B5" HeightRequest="170" Margin="0" x:Name="supnone" 
+                   >
+                <StackLayout BackgroundColor="#0F11B5">
+
+                    <StackLayout >
+                        <!--FRAME CROIX-->
+                        <Button  BackgroundColor="#0F11B5" ImageSource="croix.png"
+                                 Clicked="ImageButt_Clicked" HorizontalOptions="End" Margin="-10" />
+                        <!--TEXTE-->
+                        <Label  TextColor="#FFF" Text="Vous pouvez vous Connecter ou créer un compte pour profiter de l'analyse de vos impacts."
+                                FontSize="{OnPlatform   iOS=18, Android=18, UWP=18}">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Montserrat-Regular"/>
+                                    <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </StackLayout>
+
+                    <!--BOUTON CONNECTION-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="10,10">
+                        <Button  Text="Me connecter" Clicked="Connect_Clicked" Margin="0,10"
+                         BackgroundColor="#0F11B5" TextColor="#FFF" BorderWidth="2" BorderColor="#FFF" 
+                                 WidthRequest="120"/>
+                        <Button Text="Créer un compte" Clicked="Cre_Clicked" Margin="5,10"
+                        BackgroundColor="#0F11B5" TextColor="#FFF" BorderWidth="2" BorderColor="#FFF" 
+                                WidthRequest="130"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <StackLayout></StackLayout>
+
+            <!--NOM PRENOM-->
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                                 >
+                <!--<Image x:Name="fileImage"  Margin="0,0" Source="avatar.png"/>-->
+                <Label Text="{Binding UserModel.NomPrenom}" TextColor="#0F11B5" Margin="20,0" 
+                       FontSize="{OnPlatform   iOS=24, Android=28, UWP=30}">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Quicksand-Bold"/>
+                            <On Platform="Android, UWP" Value="Quicksand-Bold.ttf#Quicksand-Bold"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <!--DATE INSCRIPTION-->
+            <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="dld" TextColor="Transparent"/>
+
+                --><!--<Label  Margin="10,10" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:dd MMMM yyyy, HH:mm}'}">--><!--
+                <Label  >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label Margin="10,10" Text="{Binding UserModel.Date}" >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>-->
+
+            <StackLayout >
+                <Label Text="llllllll" TextColor="Transparent"/>
+            </StackLayout>
+
+            <!--PARTIE DES ONGLETS VERS LES PAGES-->
+
+            <Frame BorderColor="Gray"
+                   CornerRadius="10"
+                   Padding="8">
+                <FlexLayout Direction="Column">
+
+                    <!--METHODE DE CALCUL-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <Image x:Name="fileMethod" Source="calcul.png" Aspect="AspectFit" Margin="20,10"/>
+                        <Button Text="Nos Méthodes de calcul"  Clicked="MethodeCalcu" TextColor="#707070" FontSize="14" BackgroundColor="Transparent"/>
+                    </StackLayout>
+
+                    <BoxView HorizontalOptions="Start" HeightRequest="0.4" Color="#707070"/>
+
+                    <!--INFORMATION PERSONNELLES-->
+                    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" 
+                                 IsVisible="{Binding Source={x:Static vm:DialogViewModel.Instance}, Path=IsAfficher}">
+                        <Image x:Name="fileInfo" Source="avatarinfo.png" Aspect="AspectFit" Margin="20,15"/>
+                        <Button  Text="Mes informations personnelles" Clicked="InfoPerso" TextColor="#707070" FontSize="14" BackgroundColor="Transparent"/>
+                    </StackLayout>
+
+                    <BoxView HorizontalOptions="Start" HeightRequest="0.4" Color="#707070"/>-->
+
+                    <!--MES FAVORIS-->
+                    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" 
+                                 IsVisible="{Binding Source={x:Static vm:DialogViewModel.Instance}, Path=IsAfficher}">
+                        <Image Source="etoile.png" Aspect="AspectFit" Margin="20,15"/>
+                        <Button Text="Mes favoris" Clicked="Favoris" TextColor="#707070" FontSize="14" BackgroundColor="Transparent"/>
+                    </StackLayout>
+
+                    <BoxView HorizontalOptions="Start" HeightRequest="0.4" Color="#707070"/>-->
+
+                    <!--PROTECTION DE MES DONNEES-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <Image x:Name="fileProct" Source="secu.png" Aspect="AspectFit" Margin="20,15"/>
+                        <Button Text="Protection de mes données" Clicked="ProtecDonne" TextColor="#707070" FontSize="14" BackgroundColor="Transparent"/>
+                    </StackLayout>
+
+                    <BoxView HorizontalOptions="Start" HeightRequest="0.4" Color="#707070"/>
+
+                    <!--AIDE-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <Image x:Name="fileAide" Source="aide.png" Aspect="AspectFit" Margin="20,15"/>
+                        <Button Text="Aide" Clicked="BtnAid" TextColor="#707070" FontSize="14" FontAttributes="None" BackgroundColor="Transparent"/>
+                    </StackLayout>
+
+                    <BoxView HorizontalOptions="Start" HeightRequest="0.4" Color="#707070"/>
+
+                    <!--MENTIONS LEGALES-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" >
+                        <Image x:Name="fileLegale" Source="mention.png" Aspect="AspectFit" Margin="20,10"/>
+                        <Button Text="Mentions Légales" Clicked="MentionsLegale" TextColor="#707070" FontSize="14" FontAttributes="None" BackgroundColor="Transparent"/>
+                    </StackLayout>
+
+                    <BoxView HorizontalOptions="Start" HeightRequest="0.4" Color="#707070"/>
+
+                    <!--DECONNECTER-->
+                    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center"
+                                 IsVisible="{Binding Source={x:Static vm:DialogViewModel.Instance}, Path=IsAfficher}">
+                        <Image x:Name="fileDeco" Source="deco.png" Aspect="AspectFit" Margin="20,15"/>
+                        <Button Text="Me déconnecter" 
+                                Command="{Binding LogoutCommand}"  Clicked="OnLogoutButtonClicked" TextColor="#707070" FontSize="14" BackgroundColor="Transparent"/>
+                    </StackLayout>-->
+
+
+                </FlexLayout>
+            </Frame>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

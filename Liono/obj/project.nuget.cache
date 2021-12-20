@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "tEaGIkMqXCEDxIXa6hSe3y8K6y13NAlEEOLT3+kKaMDeQmXLr+yACihR5v1xiKZUDHpjKBkjbA+fTAJiKH1Nvg==",
+  "success": true,
+  "projectFilePath": "/Users/cynthiadev/Projects/Liono/Liono/Liono.csproj",
+  "expectedPackageFiles": [
+    "/Users/cynthiadev/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/syncfusion.licensing/19.3.0.57/syncfusion.licensing.19.3.0.57.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/syncfusion.xamarin.core/19.3.0.57/syncfusion.xamarin.core.19.3.0.57.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/syncfusion.xamarin.sfcarousel/19.3.0.57/syncfusion.xamarin.sfcarousel.19.3.0.57.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/xam.plugins.settings/3.1.1/xam.plugins.settings.3.1.1.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/xamarin.forms/5.0.0.2244/xamarin.forms.5.0.0.2244.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/zxing.net.mobile/2.4.1/zxing.net.mobile.2.4.1.nupkg.sha512",
+    "/Users/cynthiadev/.nuget/packages/zxing.net.mobile.forms/2.4.1/zxing.net.mobile.forms.2.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

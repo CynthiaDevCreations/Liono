@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Liono"
+    x:Class="Liono.Views.InfoPersoChangePass"
+    BackgroundColor="#0F11B5">
+
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="#FFF"  Margin="15,10">
+
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="2">
+
+            <!--LOGO-->
+            <Image Source="motpass.png" HeightRequest="35"  Margin="5,5,0,5"/>
+
+            <!--TITRE-->
+            <Label Text="Mot de passe" FontSize="{OnPlatform   iOS=24, Android=20, UWP=20}" TextColor="#000">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-Medium"/>
+                        <On Platform="Android, UWP" Value="Montserrat-Medium.ttf#Montserrat-Medium"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+        </StackLayout>
+
+        <BoxView HorizontalOptions="Center" HeightRequest="1" Color="#707070" WidthRequest="200"/>
+
+
+        <!--CASSE ANCIEN MOT DE PASSE-->
+        <Label Text="Mon mot de passe actuel" TextColor="Black" FontSize="18" Margin="20,20,0,10">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                    <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+        <local:RoundedEntry 
+                   x:Name="passwordEntry" IsPassword="true" 
+                   Placeholder="Nouveau mot de passe" TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,0,20,0"/>
+
+        <!--<ListView  ItemsSource="{Binding OldPassword}"  x:Name="Info">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="15,0">
+
+                            -->
+        <!--CASSE ANCIEN MOT DE PASSE-->
+        <!--
+                            <Label Text="Mon mot de passe actuel :" TextColor="Black" FontSize="18" Margin="20,0">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="OS" Value="Montserrat-SemiBold"/>
+                                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
+                            <Label Text="{Binding OldPassword}" FontAttributes="Bold" TextColor="Black" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+
+        <!--CASSE NOUVEAU MOT DE PASSE-->
+        <Label Text="Modifier mon mot de passe :" TextColor="Black" FontSize="18" Margin="20,12,0,0">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                    <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+        <local:RoundedEntry  
+                    IsPassword="true" 
+                   Placeholder="Nouveau mot de passe" TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,10"/>
+
+        <!--CASSE CONFRIMER MOT DE PASSE -->
+        <local:RoundedEntry 
+                   Placeholder="Confirmation" IsPassword="true" 
+                   TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,2"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="10,20">
+            <!--BUTTON CHANGER MOT DE PASSE -->
+            <Button Text="Annuler" Margin="5" Padding="30,0,30,0"
+			BackgroundColor="Transparent" TextColor="#E84354" Clicked="AnnulModif"
+                        BorderColor="#E84354" BorderWidth="2" CornerRadius="20"  />
+
+            <!--BUTTON CHANGER SON ADRESSE MAIL-->
+            <Button Text="Confirmer"  BackgroundColor="Transparent" TextColor="#0F11B5" Margin="5" Padding="25,0,25,0"
+			BorderColor="#0F11B5" BorderWidth="2" CornerRadius="20" Command="{Binding ChangePassword}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

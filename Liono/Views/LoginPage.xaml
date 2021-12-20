@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Liono.ViewModels;assembly=Liono"
+             xmlns:local="clr-namespace:Liono"
+             x:Class="Liono.Views.LoginPage"
+              Shell.NavBarIsVisible="False"
+             BackgroundColor="#0F11B5">
+
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="#FFF"  Margin="15,10">
+
+            <!--LOGO -->
+            <Image x:Name="fileImage"  Margin="0,20" Source="liono.png" Aspect="AspectFit"/>
+
+            <!--TITRE-->
+            <Label Text="Se connecter" FontSize="{OnPlatform   iOS=24, Android=28, UWP=30}" HorizontalOptions="Center"
+		  Margin="0,10" TextColor="#0F11B5">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Quicksand-Bold"/>
+                        <On Platform="Android, UWP" Value="Quicksand-Bold.ttf#Quicksand-Bold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <!--CASSE EMAIL -->
+            <Label Text="Adresse mail" TextColor="Black" FontSize="18" Margin="20,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:RoundedEntry  Text="{Binding Email}" TextColor="#0F11B5" x:Name="emailEntry" Keyboard="Email" Placeholder="" ClearButtonVisibility="WhileEditing" 
+                    Margin="20,0"/>
+            
+
+            <!--CASSE MOT DE PASSE -->
+            <Label Text="Votre mot de passe" TextColor="Black" FontSize="18" Margin="20,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:RoundedEntry Text="{Binding Password}" TextColor="#0F11B5" x:Name="passwordEntry" IsPassword="False" 
+                   ClearButtonVisibility="WhileEditing" Margin="20,0"/>
+
+
+
+            <!--BOUTON CONNECTER -->
+            <Button Command="{Binding LoginCommand}" Text="Se Connecter" 
+                    Margin="10,10" Padding="20,10" BackgroundColor="Transparent" 
+                    TextColor="#0F11B5" BorderColor="#0F11B5" BorderWidth="2" CornerRadius="20"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

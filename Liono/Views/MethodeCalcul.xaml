@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Liono.Views.MethodeCalcul"
+   
+   BackgroundColor="#0F11B5">
+
+
+    <ScrollView Margin="2">
+
+        <StackLayout  BackgroundColor="#FFF" Margin="10">
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="10">
+                <!--IMAGE-->
+                <Image Source="calcul.png" HeightRequest="35"/>
+                <!--TITRE-->
+                <Label Text="Nos méthodes de calcul" FontSize="{OnPlatform   iOS=24, Android=22, UWP=30}" TextColor="#000">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Medium"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Medium.ttf#Montserrat-Medium"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <BoxView HorizontalOptions="Center" HeightRequest="1" Color="#707070" WidthRequest="200"/>
+
+            <!--TEXTE-->
+
+            <!--TITRE-->
+            <StackLayout Margin="5,5">
+                <Label FontAttributes="Bold" TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=18, Android=20, UWP=24}"
+                        Text="Qu'est-ce que la Base Carbone &#174; ? ">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <!--TEXTE-->
+            <StackLayout Margin="5,5">
+
+                <Label  HorizontalOptions="Center"  VerticalOptions="CenterAndExpand" TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                        Text="La Base Carbone est une base de données publiques de facteurs d'émissions nécessaires à la réalisation d'exercices de comptabilité carbone. Elle est administrée par l'ADEME, mais sa gouvernance est multiacteur et son enrichissement est ouvert. La consultation en ligne des données et de la documentation requiert la création d'un compte et est gratuite ! &#10;">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <!--SOUS TITRE-->
+            <StackLayout Margin="5">
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=17, Android=17, UWP=22}"
+                        Text="Les grands principes">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <!--TITRE-->
+
+
+            <StackLayout Margin="5">
+
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                        Text="&#9679; Multiréglementaire&#10;
+- Article L229-25&#10;
+ - Article L1431-3&#10;
+ - EU-ETS&#10;&#10;">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+
+
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                        Text="&#9679; Gouvernance partagée&#10;
+- ADEME&#10;
+ - Ministères&#10;
+ - Organismes techniques&#10;
+ - Associations&#10;
+ - MEDEF&#10;&#10;">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                         Text="&#9679; Données ouvertes&#10;
+- Consultation gratuite&#10;
+ - Système de contributions&#10;
+ - Forum&#10;&#10;">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                        Text="&#9679; Transparente&#10;
+- Documentation&#10;
+ - Sources&#10;">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-Regular"/>
+                        <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+
+
+            <!--DEUXIEME SECTION !!!!-->
+
+
+            <StackLayout Margin="5">
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                        Text="L'articulation et la convergence des réglementations environnementales passent par une homogénéisation des données. La Base Carbone &#174;  se propose d'être cette source de données centralisée. Aujourd'hui, elle est la base de données de référence de l'article L229-25 du Code de l'Environnement. Et elle est entièrement homogène avec l'article L1341-3 du code des transports et les valeurs par défaut du système d'échange des quotas d'émissions européen. Les données de la Base Carbone &#174;  sont consultables gratuitement par tous. De plus, l'originalité de cet outil est qu'il permet à  des tiers de proposer leurs propres données. Ces données sont alors évaluées sur leur qualité et leur transparence, puis validées ou refusées pour leur incorporation dans la Base Carbone &#174; . Enfin, un forum permet aux utilisateurs de poser leurs questions sur les données ou de les contester.  L'administration de la Base Carbone &#174;  est assurée par l'ADEME. Mais ses orientations et les données qu'elle contient sont validées par un comité de gouvernance regroupant divers acteurs publics et privés. Enfin, la transparence est une des clés de voute de la Base Carbone  &#174; . Une documentation détaille les hypothèses de construction de l'ensemble des données de la base et renvoie vers les études qui ont permis leur construction. &#10;&#10;&#10;&#10;">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+
+            </StackLayout>
+
+
+            <!--TROIXIEME SECTION !!!!-->
+
+            <!--TITRE + TEXTE-->
+            <StackLayout Margin="5">
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=18, Android=20, UWP=24}"
+                        Text="1.  Le produit labellisé de type 1 : label officiel;">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                        Text="Les écolabels sont les signes officiels de reconnaissance des avantages environnementaux des produits qui les portent. Mis en place par les pouvoirs publics, ils garantissent à la fois la qualité d'usage d'un produit et ses caractéristiques écologiques. Le produit écolabellisé fait l'objet d'un contrôle par une tierce partie et satisfait à un cahier des charges préétabli fixant des critères pour la catégorie de produit considérée &#10;  L'écolabel est un étiquetage environnemental de type I, encadré par la norme internationale ISO 14024 &#8220;Marquage et déclarations environnementaux -- Étiquetage environnemental de type I -- Principes et méthodes&#8221;. Cette norme pose les principes, les méthodes et les règles de certification de l'écolabel. &#10; ">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <!--TITRE + TEXTE-->
+            <StackLayout Margin="5">
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=18, Android=20, UWP=22}"
+                        Text="Le produit labellisé de type 2">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                        Text="Ce sont toutes les allégations environnementales avancées par un producteur (ou un distributeur) sous sa seule responsabilité.
+Le plus souvent, une auto-déclaration ne porte que sur une caractéristique environnementale du produit ou ne concerne qu'une étape du cycle de
+vie du produit. De même, des messages et pictogrammes largement répandus, comme 'économe en énergie' ne font généralement
+pas appel à un contrôle par tierce partie. Faites sous la seule responsabilité des entreprises, les informations auto-déclarées sont très variées.
+Certains labels privés sont collectifs, c'est-à-dire initiés par un secteur industriel ou par un organisme professionnel considérés comme
+indépendants du fabricant, qui assurent que chaque produit qui les porte satisfait à un cahier des charges, identique pour tous. &#10;
+
+Pour encadrer l'utilisation des auto-déclarations environnementales, l'ISO a publié respectivement
+en 2000 et 1999 les normes 14020 et 14021. Ces normes d'application volontaire rappellent les principes
+généraux de pertinence, de sincérité et d'exactitude que toute auto-déclaration environnementale est censée respecter :&#10;:&#10;
+&#9679; NF EN ISO 14020 &#8220;Étiquettes et déclarations environnementales '?? Principes généraux&#8221;  &#10;. 
+&#9679; NF EN ISO 14021 &#8220;Marquages et déclarations environnementaux '?? Auto- déclarations environnementales (Étiquetage de type II)&#822; &#10;.:&#10;
+La norme ISO 14021 prescrit les exigences applicables aux auto-déclarations, y compris les affirmations, symboles et graphiques qui concernent les produits.
+  Elle précise, en particulier, les définitions et les modes de preuve à respecter pour une douzaine de caractéristiques environnementales usuelles :
+&#8220;contenu en recyclé&#8221;, &#8220;économe en ressources&#8221;,
+&#8220;énergie récupérée&#8221;, &#8220;réduction de déchets&#8221;, &#8220;consommation énergétique réduite&#8221;,
+&#8220;économe en eau&#8221;, &#8220;longue durée de vie&#8221;, &#8220;réutilisable ou re-remplissable&#8221;,
+&#8220;recyclable&#8221;, &#8220;conçu pour le désassemblage&#8221;, &#8220;compostable&#8221; et &#8220;dégradable&#8221;.">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+
+            <!--TITRE + TEXTE-->
+            <StackLayout Margin="5">
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=18, Android=20, UWP=24}"
+                        Text="Les éco-profils (type 3)">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <Label  TextColor="{AppThemeBinding Dark=White, Light=Black}" FontSize="{OnPlatform   iOS=14, Android=14, UWP=22}"
+                    Text="Ni certification officielle (comme les écolabels NF Environnement et européens), ni simple auto-déclaration, l'éco-profil
+                    est le dernier né des déclarations environnementales. Il consiste en un étiquetage d'un produit sur ses performances environnementales. &#10;
+                    Il permet la mise à disposition de données quantitatives sur les impacts environnementaux
+                    (effet de serre, consommation de ressources, CO2, déchets...) d'un produit, lesquelles sont souvent
+                    présentées sous forme de diagrammes parfois accompagnés de quelques informations qualitatives.
+                    Un éco-profil consiste en une retranscription des résultats de l'ACV d'un produit. Il donne une photographie
+                    à un instant donné des impacts environnementaux du produit. &#10;
+                    Les avantages de l'éco-profil sont nombreux :&#10;
+&#9679; Visualiser les efforts environnementaux sur un produit&#10;
+&#9679; Comparer la performance environnementale avec d'autres produits&#10;
+&#9679; Attirer l'attention du consommateur sur le produit&#10;
+&#9679; Améliorer sa performance environnementale&#10;
+Un éco-profil peut être actualisé périodiquement, ce qui permet au consommateur averti de visualiser les progrès accomplis, selon un rythme choisi par l'industriel. Le caractère écologique d'un produit et le bien-fondé des indicateurs retenus sont
+                    laissés entièrement à l'appréciation du consommateur.&#10;
+                    La norme internationale ISO TR 14025 &#8220;Marquages et déclarations environnementaux '??
+                    Déclarations environnementales de type III&#8221;, donne des lignes directrices pour
+                    l'élaboration des éco-profils. Elle a été révisée par la norme ISO 14025 : 2006.&#10;
+                    Encadré par cette norme, l'éco-profil est établit volontairement par l'industriel suite à un bilan environnemental de son produit..&#10;
+                    Cette norme établit spécifiquement l'utilisation de la série de normes ISO 14040 pour le développement de déclarations environnementales
+                    de type III et des programmes correspondants. Elle établit également les principes relatifs à l'utilisation d'informations environnementales
+                    additionnelles. ">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+
+
+
+            <!--LIEN A CLIQUER-->
+
+            <StackLayout Margin="10,10" Spacing="20">
+                <Button Text="Consulter le site de l'ADEME "   Clicked="Site_ADEME" BackgroundColor="Transparent" BorderColor="#0F11B5"
+                        TextColor="#0F11B5" BorderWidth="1"
+                      Command="{Binding TapCommand}"
+                                      CommandParameter="https://www.ademe.fr/" />
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </ScrollView>
+</ContentPage>

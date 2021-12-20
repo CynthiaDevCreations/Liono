@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Liono"
+    x:Class="Liono.Views.InfoPerso"
+    BackgroundColor="#0F11B5">
+
+
+
+    <ScrollView>
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="#FFF"  Margin="15,10">
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="2">
+
+                <!--LOGO-->
+                <Image Source="avatarinfo.png"  HeightRequest="35"  Margin="5,5,0,5" />
+
+                <!--TITRE-->
+                <Label HorizontalTextAlignment="Center" Text="Mes informations personnelles" FontSize="{OnPlatform   iOS=24, Android=20, UWP=20}" TextColor="#000">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Medium"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Medium.ttf#Montserrat-Medium"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <BoxView HorizontalOptions="Center" HeightRequest="1" Color="#707070" WidthRequest="200"/>
+
+            <!--PARTIE IMAGE PHOTO-->
+            <FlexLayout Direction="Column">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" >
+                    <Image x:Name="fileMainMethod" Source="iconphoto.png" Aspect="AspectFit" Margin="20,10"/>
+                    <Button Text="Ajouter une photo"  BackgroundColor="Transparent" TextColor="#707070" FontSize="14" FontFamily="Montserat-Regular.ttf"/>
+                </StackLayout>
+            </FlexLayout>
+
+            <!--CASSE NOM PRENOM -->
+            <Label Text="Nom &amp; Prénom :" TextColor="Black" FontSize="18" Margin="20,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:RoundedEntry  Text="{Binding NomPrenom}"  
+                    Placeholder="" 
+                    TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,0"/>
+
+
+
+            <!--CASSE EMAIL -->
+            <Label Text="Votre adresse e.mail :" TextColor="Black" FontSize="18" Margin="20,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:RoundedEntry Text="{Binding Email}" 
+                   x:Name="emailEntry" Placeholder=""  Keyboard="Email" 
+                   TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,0,20,0"/>
+
+
+            <!--CASSE MOT DE PASSE -->
+            <Label Text="Votre mot de passe :" TextColor="Black" FontSize="18" Margin="20,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:RoundedEntry Text="{Binding Password}" 
+                   x:Name="passwordEntry" IsPassword="False" 
+                   Placeholder="" TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,0,20,0" />
+
+
+            <!--<ListView  ItemsSource="{Binding Users}"  x:Name="Info">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Margin="15,0">
+
+                                --><!--CASSE NOM PRENOM--><!--
+                                <Label Text="Nom &amp; Prénom :" TextColor="Black" FontSize="18" Margin="20,0">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                                            <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Label Text="{Binding NomPrenom}" FontAttributes="Bold" TextColor="Black" />
+
+                                --><!--CASSE EMAIL--><!--
+                                <Label Text="Mon adresse e.mail :" TextColor="Black" FontSize="18" Margin="20,0">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                                            <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <Label Text="{Binding Email}" FontAttributes="Bold" TextColor="Black" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+
+
+            <!--BUTTON CHANGER MOT DE PASSE -->
+
+            <Button Text="Changer  mon mot de passe" Margin="5"
+			BackgroundColor="Transparent" TextColor="#0F11B5" Clicked="ModifMotPass"
+                        BorderColor="#0F11B5" BorderWidth="2" CornerRadius="20"/>
+
+            <!--BUTTON CHANGER SON ADRESSE MAIL-->
+            <Button Text="Changer mon adresse mail"  BackgroundColor="Transparent" TextColor="#0F11B5" Margin="5,1,5,0"
+			BorderColor="#0F11B5" BorderWidth="2" CornerRadius="20" Clicked="ChangeAdress"/>
+
+
+            <!--BUTTON SUPPRIMER SON COMPTE-->
+            <Button Command="{Binding RemoveLogin}" Text="Supprimer mon compte"  BackgroundColor="Transparent" TextColor="#E84354" Margin="5,1,5,5"
+			BorderColor="#E84354" BorderWidth="2" CornerRadius="20"/>
+
+
+
+
+
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

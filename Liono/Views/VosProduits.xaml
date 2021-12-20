@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Liono.Views.VosProduits">
+
+
+    <StackLayout>
+
+    <StackLayout>
+        <Label Text="Votre produit" HorizontalOptions="Center" 
+                       Margin="5,5" FontSize="{OnPlatform   iOS=28, Android=18, UWP=18}">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="Quicksand-Bold"/>
+                    <On Platform="Android, UWP" Value="Quicksand-Bold.ttf#Quicksand-Bold"/>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+    </StackLayout>
+
+    <StackLayout Margin="20,30,0,10">
+        <Label TextColor="#0F11B5"  Text="Notre sélection d'alternatives" FontAttributes="Bold" 
+                       FontSize="{OnPlatform   iOS=18, Android=28, UWP=28}">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="iOS" Value="Quicksand-Bold"/>
+                    <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+
+            <Label  Text="La barre de comparaison fait référence au produit ci-dessus">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-Regular"/>
+                        <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+    </StackLayout>
+    
+    </StackLayout>
+
+</ContentPage>

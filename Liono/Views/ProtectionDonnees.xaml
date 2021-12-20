@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Liono.Views.ProtectionDonnees"
+BackgroundColor="#0F11B5">
+    <ScrollView>
+        <StackLayout  BackgroundColor="#FFF" Margin="10">
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="2">
+                <Image Source="secu.png" HeightRequest="35"/>
+                <Label Text="Protection de mes données" FontSize="{OnPlatform   iOS=22, Android=22, UWP=30}" TextColor="#000">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Medium"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Medium.ttf#Montserrat-Medium"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <BoxView HorizontalOptions="Center" HeightRequest="1" Color="#707070" WidthRequest="200"/>
+
+            <ScrollView Margin="20">
+                <Label TextColor="#000"  FontSize="{OnPlatform   iOS=18, Android=18, UWP=18}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus eget elit sed interdum. 
+                       &#10;
+                       &#10;&#10;
+Donec viverra, odio nec porttitor aliquam, orci orci bibendum leo, ac commodo dui Leo sit amet sem. Proin condimentum tortor sit amet lobortis semper. 
+                       &#10;&#10;&#10;
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse bibendum lacus scelerisque diam tincidunt, in semper sapien interdum. 
+                        &#10;&#10;&#10;
+Quisque id dolor ipsum. Sed tristique eget ipsum ac elementum. Nunc elementum pulvinar tortor id facilisis. Pellentesque vel lacus vel felis tempus cursus. Pellentesque ut feugiat ipsum. Cras elementum nisi ornare nunc bibendum pretium. 
+                        &#10;&#10;&#10;
+Pellentesque ipsum lorem, semper dictum gravida eu, interdum ut nunc. Morbi blandit orci nec lorem sodales, vitae condimentum ipsum lobortis. Aliquam erat volutpat. Sed in congue odio.">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Montserrat-Regular"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Monstserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+
+            </ScrollView>
+            <StackLayout Margin="10,10" Spacing="20">
+                <Button Text="Consulter les législations officielles "   Clicked="Site_Extern" BorderColor="#0F11B5"
+                        TextColor="#0F11B5" BorderWidth="1" BackgroundColor="Transparent" 
+                      Command="{Binding TapCommand}"
+                                      CommandParameter="https://www.economie.gouv.fr/dgccrf/Publications/Vie-pratique/Fiches-pratiques/protection-des-donnees-personnelles-quels-sont-droits" />
+            </StackLayout>
+        </StackLayout>
+
+
+    </ScrollView>
+</ContentPage>

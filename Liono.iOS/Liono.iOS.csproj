@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5AD1A89F-B3A5-43BD-9CE4-5636A8ECBA9E}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Liono.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Liono.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundedEntryRendererIos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <BundleResource Include="Resources\icon_about.png" />
+    <BundleResource Include="Resources\icon_about%402x.png" />
+    <BundleResource Include="Resources\icon_about%403x.png" />
+    <BundleResource Include="Resources\icon_feed.png" />
+    <BundleResource Include="Resources\icon_feed%402x.png" />
+    <BundleResource Include="Resources\icon_feed%403x.png" />
+    <BundleResource Include="Resources\xamarin_logo.png" />
+    <BundleResource Include="Resources\xamarin_logo%402x.png" />
+    <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\abs.png" />
+    <BundleResource Include="Resources\abs%402x.png" />
+    <BundleResource Include="Resources\abs%403x.png" />
+    <BundleResource Include="Resources\acc.png" />
+    <BundleResource Include="Resources\acc%402x.png" />
+    <BundleResource Include="Resources\acc%403x.png" />
+    <BundleResource Include="Resources\aide.png" />
+    <BundleResource Include="Resources\aide%402x.png" />
+    <BundleResource Include="Resources\aide%403x.png" />
+    <BundleResource Include="Resources\avatar.png" />
+    <BundleResource Include="Resources\avatar%402x.png" />
+    <BundleResource Include="Resources\avatar%403x.png" />
+    <BundleResource Include="Resources\avatarinfo.png" />
+    <BundleResource Include="Resources\avatarinfo%402x.png" />
+    <BundleResource Include="Resources\avatarinfo%403x.png" />
+    <BundleResource Include="Resources\btnfait.png" />
+    <BundleResource Include="Resources\btnfait%402x.png" />
+    <BundleResource Include="Resources\btnfait%403x.png" />
+    <BundleResource Include="Resources\btnfavoris.png" />
+    <BundleResource Include="Resources\btnfavoris%402x.png" />
+    <BundleResource Include="Resources\btnfavoris%403x.png" />
+    <BundleResource Include="Resources\calcul.png" />
+    <BundleResource Include="Resources\calcul%402x.png" />
+    <BundleResource Include="Resources\calcul%403x.png" />
+    <BundleResource Include="Resources\consulter.png" />
+    <BundleResource Include="Resources\consulter%402x.png" />
+    <BundleResource Include="Resources\consulter%403x.png" />
+    <BundleResource Include="Resources\creercompte.png" />
+    <BundleResource Include="Resources\creercompte%402x.png" />
+    <BundleResource Include="Resources\creercompte%403x.png" />
+    <BundleResource Include="Resources\croix.png" />
+    <BundleResource Include="Resources\croix%402x.png" />
+    <BundleResource Include="Resources\croix%403x.png" />
+    <BundleResource Include="Resources\croixbleu.png" />
+    <BundleResource Include="Resources\croixbleu%402x.png" />
+    <BundleResource Include="Resources\croixbleu%403x.png" />
+    <BundleResource Include="Resources\deco.png" />
+    <BundleResource Include="Resources\deco%402x.png" />
+    <BundleResource Include="Resources\deco%403x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\email.png" />
+    <BundleResource Include="Resources\email%402x.png" />
+    <BundleResource Include="Resources\email%403x.png" />
+    <BundleResource Include="Resources\etoile.png" />
+    <BundleResource Include="Resources\etoile%402x.png" />
+    <BundleResource Include="Resources\etoile%403x.png" />
+    <BundleResource Include="Resources\eval.png" />
+    <BundleResource Include="Resources\eval%402x.png" />
+    <BundleResource Include="Resources\eval%403x.png" />
+    <BundleResource Include="Resources\GoogleService-Info.plist" />
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\icon%402x.png" />
+    <BundleResource Include="Resources\icon%403x.png" />
+    <BundleResource Include="Resources\impac.png" />
+    <BundleResource Include="Resources\impac%402x.png" />
+    <BundleResource Include="Resources\impac%403x.png" />
+    <BundleResource Include="Resources\Lato-Bold.ttf" />
+    <BundleResource Include="Resources\Lato-Italic.ttf" />
+    <BundleResource Include="Resources\Lato-Light.ttf" />
+    <BundleResource Include="Resources\Lato-Regular.ttf" />
+    <BundleResource Include="Resources\liono.png" />
+    <BundleResource Include="Resources\liono%402x.png" />
+    <BundleResource Include="Resources\liono%403x.png" />
+    <BundleResource Include="Resources\mention.png" />
+    <BundleResource Include="Resources\mention%402x.png" />
+    <BundleResource Include="Resources\mention%403x.png" />
+    <BundleResource Include="Resources\Montserrat-Bold.ttf" />
+    <BundleResource Include="Resources\Montserrat-Light.ttf" />
+    <BundleResource Include="Resources\Montserrat-Medium.ttf" />
+    <BundleResource Include="Resources\Montserrat-Regular.ttf" />
+    <BundleResource Include="Resources\Montserrat-SemiBold.ttf" />
+    <BundleResource Include="Resources\motpass.png" />
+    <BundleResource Include="Resources\motpass%402x.png" />
+    <BundleResource Include="Resources\motpass%403x.png" />
+    <BundleResource Include="Resources\Onboarding1.png" />
+    <BundleResource Include="Resources\Onboarding1%402x.png" />
+    <BundleResource Include="Resources\Onboarding1%403x.png" />
+    <BundleResource Include="Resources\Onboarding2.png" />
+    <BundleResource Include="Resources\Onboarding2%402x.png" />
+    <BundleResource Include="Resources\Onboarding2%403x.png" />
+    <BundleResource Include="Resources\Onboarding3.png" />
+    <BundleResource Include="Resources\Onboarding3%402x.png" />
+    <BundleResource Include="Resources\Onboarding3%403x.png" />
+    <BundleResource Include="Resources\Onboarding4.png" />
+    <BundleResource Include="Resources\Onboarding4%402x.png" />
+    <BundleResource Include="Resources\Onboarding4%403x.png" />
+    <BundleResource Include="Resources\photo.png" />
+    <BundleResource Include="Resources\photo%402x.png" />
+    <BundleResource Include="Resources\photo%403x.png" />
+    <BundleResource Include="Resources\profil.png" />
+    <BundleResource Include="Resources\profil%402x.png" />
+    <BundleResource Include="Resources\profil%403x.png" />
+    <BundleResource Include="Resources\Quicksand-Bold.ttf" />
+    <BundleResource Include="Resources\Quicksand-Light.ttf" />
+    <BundleResource Include="Resources\Quicksand-Medium.ttf" />
+    <BundleResource Include="Resources\Quicksand-Regular.ttf" />
+    <BundleResource Include="Resources\Quicksand-SemiBold.ttf" />
+    <BundleResource Include="Resources\secu.png" />
+    <BundleResource Include="Resources\secu%402x.png" />
+    <BundleResource Include="Resources\secu%403x.png" />
+    <BundleResource Include="Resources\splash.png" />
+    <BundleResource Include="Resources\splash%402x.png" />
+    <BundleResource Include="Resources\splash%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024x1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\120x120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\152x152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\167x167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\180x180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\20x20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29x29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40x40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58x58-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\58x58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60x60-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76x76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80x80-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\80x80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\87x87.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2244" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile.Forms">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfCarousel">
+      <Version>19.3.0.57</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Liono\Liono.csproj">
+      <Project>{84798F68-DD82-4CE5-924D-689360DE7941}</Project>
+      <Name>Liono</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

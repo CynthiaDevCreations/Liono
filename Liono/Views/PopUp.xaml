@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Liono.Views.PopUp"
+             BackgroundColor="Transparent">
+
+
+    <Frame HorizontalOptions="Center" VerticalOptions="Center" 
+           BackgroundColor="White" HeightRequest="170" Margin="0" x:Name="noitem" >
+
+        
+
+        <Button Text="Détail" Clicked="Detail_Clicked" Margin="5,10"
+                        BackgroundColor="#0F11B5" TextColor="#FFF" BorderWidth="2" BorderColor="#FFF" 
+                                WidthRequest="130"/>
+    </Frame>
+</ContentPage>

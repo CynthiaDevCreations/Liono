@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:Liono.ViewModels"
+    x:Class="Liono.Views.Accueil"  >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:AccueilViewModel x:Key="vm"/>
+            <vm:DialogViewModel x:Key="dvm"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+
+    <ScrollView BindingContext="{StaticResource vm}">
+        <StackLayout Padding="10,10,10,0">
+            <Frame BackgroundColor="#0F11B5" HeightRequest="170" Margin="0" x:Name="supprnone"  
+                   IsVisible="{Binding Source={x:Static vm:DialogViewModel.Instance}, Path=IsNotConnected}">
+                <StackLayout BackgroundColor="#0F11B5">
+
+                    <StackLayout >
+                        <!--FRAME CROIX-->
+                        <Button  BackgroundColor="#0F11B5" ImageSource="croix.png"
+                                 Clicked="ImageButton_Clicked" HorizontalOptions="End" Margin="-10" />
+                        <!--TEXTE-->
+                        <Label  TextColor="#FFF" Text="Vous pouvez vous Connecter ou créer un compte pour profiter de l'analyse de vos impacts."
+                                FontSize="{OnPlatform   iOS=18, Android=18, UWP=18}">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Montserrat-Regular"/>
+                                    <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </StackLayout>
+
+                    <!--BOUTON CONNECTION-->
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="10,10">
+                        <Button  Text="Me connecter" Clicked="Connection_Clicked" Margin="0,10"
+                         BackgroundColor="#0F11B5" TextColor="#FFF" BorderWidth="2" BorderColor="#FFF" 
+                                 WidthRequest="120"/>
+                        <Button Text="Créer un compte" Clicked="Creer_Clicked" Margin="5,10"
+                        BackgroundColor="#0F11B5" TextColor="#FFF" BorderWidth="2" BorderColor="#FFF" 
+                                WidthRequest="130"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+
+            <!--NOM APPLICATION-->
+            <StackLayout Margin="20,30,0,10" 
+                         IsVisible="{Binding Source={x:Static vm:DialogViewModel.Instance}, Path=IsNotConnected}">
+                <Label TextColor="#0F11B5"  Text="Bienvenue sur Liono !" FontAttributes="Bold" 
+                       FontSize="{OnPlatform   iOS=28, Android=30, UWP=30}">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Quicksand-Bold"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <StackLayout Margin="20,10,0,0"
+                         IsVisible="{Binding Source={x:Static vm:DialogViewModel.Instance}, Path=IsAfficher}" 
+                         HorizontalOptions="Center">
+                <Label TextColor="#0F11B5"  Text="Bienvenue" FontAttributes="Bold" 
+                       FontSize="{OnPlatform   iOS=28, Android=30, UWP=30}">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Quicksand-Bold"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+
+            <StackLayout Margin="20,-10,0,10" HorizontalOptions="Center">
+                <Label TextColor="#0F11B5" Text="{Binding UserModel.NomPrenom}"  FontAttributes="Bold" 
+                       FontSize="{OnPlatform   iOS=28, Android=30, UWP=30}">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Quicksand-Bold"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            
+            
+
+            <!--CADRE IMAGE ET TEXTE QUI EST REMOVE-->
+            <Frame BorderColor="Gray"
+                   CornerRadius="20"
+                   Padding="0"
+                   IsClippedToBounds="True" x:Name="nonmerc">
+
+                <FlexLayout Direction="Column" HeightRequest="350">
+                    <StackLayout>
+                        <Image Source="abs.png" Aspect="Fill" HeightRequest="140"  />
+                        <Label Text="Votre engagement du jour" TextColor="#000" 
+                               FontSize="{OnPlatform   iOS=24, Android=24, UWP=24}" Margin="15,0,10,0">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Quicksand-Bold"/>
+                                    <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+
+                        <Label Text="Prenez une douche plutôt qu'un bain et ne laissez pas couler 
+                               l'eau lorsque vous vous savonnez ! " Margin="15,10,10,30"
+                               FontSize="16" TextColor="#000">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Montserrat-Regular"/>
+                                    <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </StackLayout>
+
+                    <!--BOUTON REMOVE DU CADRE-->
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Start" >
+
+                        <Button Text="Non merci" TextColor="#0F11B5" Margin="2,0,2,0" Padding="5"
+                                BackgroundColor="Transparent" Clicked="NonMerci_Clicked"/>
+                        <Button ImageSource="btnfait.png"  Clicked="ImageButton21" BackgroundColor="White" />
+                    </StackLayout>
+                </FlexLayout>
+            </Frame>
+
+
+            <!--PARTIE DES ARTICLES SCANNER HORS CONNECTION-->
+            <StackLayout Margin="20,30,0,10">
+                <Label TextColor="#0F11B5"  Text="Articles les plus consultés récemment" FontAttributes="Bold" 
+                       FontSize="{OnPlatform   iOS=18, Android=28, UWP=28}">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="Quicksand-Bold"/>
+                            <On Platform="Android, UWP" Value="Montserrat-Regular.ttf#Montserrat-Regular"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

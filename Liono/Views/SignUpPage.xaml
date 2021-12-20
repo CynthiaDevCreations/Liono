@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:viewModels="clr-namespace:Liono.ViewModels"
+    x:Class="Liono.Views.SignUpPage"
+    xmlns:local="clr-namespace:Liono"
+    BackgroundColor="#0F11B5">
+
+    <ContentPage.BindingContext>
+        <viewModels:SignUpViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content >
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="#FFF"  Margin="15,5,5,2">
+
+            <!--EN TETE -->
+            <Image x:Name="fileImage"  Margin="0,5" Source="liono.png" />
+            <Label Text="Créer un compte Liono" FontSize="{OnPlatform   iOS=24, Android=28, UWP=30}" HorizontalOptions="Center"
+		  Margin="0,5" TextColor="#0F11B5">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Quicksand-Bold"/>
+                        <On Platform="Android, UWP" Value="Quicksand-Bold.ttf#Quicksand-Bold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <BoxView HorizontalOptions="Center" HeightRequest="0.3" WidthRequest="250" Color="#707070" Margin="0,0,0,8"/>
+
+            <!--CASSE NOM PRENOM -->
+            <Label Text="Nom &amp; Prénom :" TextColor="Black" FontSize="18" Margin="20,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:RoundedEntry  Text="{Binding NomPrenom}"  
+                    x:Name="nomprenomEntry" Placeholder="" 
+                    TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,0"/>
+
+
+
+            <!--CASSE EMAIL -->
+            <Label Text="Votre adresse e.mail :" TextColor="Black" FontSize="18" Margin="20,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:RoundedEntry  Text="{Binding Email}" 
+                   x:Name="emailEntry" Placeholder=""  Keyboard="Email" 
+                   TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,0"/>
+
+
+            <!--CASSE MOT DE PASSE -->
+            <Label Text="Votre mot de passe :" TextColor="Black" FontSize="18" Margin="20,0">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Montserrat-SemiBold"/>
+                        <On Platform="Android, UWP" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <local:RoundedEntry  Text="{Binding Password}" 
+                   x:Name="passwordEntry" IsPassword="False" 
+                   Placeholder="" TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,0"/>
+
+
+
+
+            <!--CASSE CONFRIMER MOT DE PASSE -->
+            <local:RoundedEntry Text="{Binding ConfirmPassword}" 
+                   Placeholder="Confirmation" IsPassword="False" 
+                   TextColor="#0F11B5" ClearButtonVisibility="WhileEditing" Margin="20,0"  />
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="20,20">
+                <!--BOUTON CONFIRMER-->
+                <Button Command="{Binding RegisterCommand}" Text="Confirmer" Margin="5" Padding="25,0,25,0"
+			BackgroundColor="Transparent" TextColor="#0F11B5" 
+                        BorderColor="#0F11B5" BorderWidth="2" CornerRadius="20"/>
+
+
+                <!--BOUTON ANNULER -->
+                <Button Text="Annuler"  BackgroundColor="Transparent" TextColor="#E84354" Padding="30,0,30,0" Margin="5"
+			BorderColor="#E84354" Clicked="Annul_Clicked" BorderWidth="2" CornerRadius="20" />
+            </StackLayout>
+
+           
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{04AF8924-0C1D-4092-988B-7633C4C99806}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Liono/Views/Evaluer.xaml.cs">
+    <Files>
+      <File FileName="Liono/Views/Accueil.xaml" Line="1" Column="1" />
+      <File FileName="Liono/Views/Accueil.xaml.cs" Line="11" Column="6" />
+      <File FileName="Liono/Views/Carrousel.xaml" Line="1" Column="1" />
+      <File FileName="Liono/Views/Evaluer.xaml" Line="1" Column="1" />
+      <File FileName="Liono/Views/Evaluer.xaml.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Liono" expanded="True">
+            <Node name="Liono" expanded="True">
+              <Node name="Helpers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Accueil.xaml" expanded="True" />
+                <Node name="Evaluer.xaml" expanded="True">
+                  <Node name="Evaluer.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Liono.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
